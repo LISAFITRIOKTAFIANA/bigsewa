@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIG SEWA - Sewa Perlengkapan Piknik Estetik Blitar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation (SAMA PERSIS DENGAN HALAMAN LAIN) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo-bigsewa.jpeg" alt="BIG SEWA Logo" 
+                    style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                <span>BIG SEWA</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Beranda</a></li>
+                <li><a href="katalog.html">Katalog</a></li>
+                <li><a href="cara-sewa.html">Cara Sewa</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+            <!-- Cart Icon -->
+            <div class="cart-icon" id="cartToggle">
+                <span class="cart-count">0</span>
+                🛒
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Sewa Perlengkapan Piknik Estetik <span>#Sekadarnya</span> di Blitar</h1>
+                <p>Dari kursi lipat, tenda, sampai lensa Apexel untuk foto kece. Semua siap menemani momen spesial kamu tanpa ribet!</p>
+                <div class="hero-buttons">
+                    <a href="katalog.html" class="btn btn-primary">Lihat Katalog</a>
+                    <a href="https://wa.me/6285745565042" class="btn btn-secondary">WhatsApp Admin</a>
+                </div>
+                <p class="brand-tagline">"BIG SEWA hadir untuk kamu yang ingin piknik estetik tanpa repot! Sewa perlengkapan lengkap dengan harga hemat dan layanan ramah hanya di Blitar."</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Tentang Section -->
+    <section class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tentang BIG SEWA</h2>
+                <p>Turn Moments into Memories</p>
+            </div>
+            <div class="about-content">
+                <p>BIG SEWA adalah penyedia jasa sewa perlengkapan outdoor dan piknik di Blitar. Berawal dari hobi ngopi dan nongkrong di alam, kami sadar kalau nggak semua orang punya perlengkapan sendiri. Makanya kami hadir dengan konsep <strong>"Turn Moments into Memories"</strong> — bantu kamu menciptakan momen indah tanpa perlu repot beli alat mahal.</p>
+                <p>Semua barang kami rawat biar bersih, wangi, dan siap pakai. Ada perlengkapan camping, alat masak, dekorasi estetik (bunga kering & keranjang rotan), sampai lensa Apexel buat fotografi!</p>
+            </div>
+            <div class="about-location">
+                <div class="location-icon">
+                    <img src="images/ikon map.png" alt="Location">
+                </div>
+                <p><strong>Jl. Candi Sewu No.5, RT.01/RW.06, Penataran, Kec. Nglegok, Kabupaten Blitar, Jawa Timur 66181</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produk Unggulan -->
+    <section class="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2>Produk Unggulan</h2>
+                <p>Yang paling sering disewa customer</p>
+            </div>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <img src="images/kursi-lipat.png" alt="Kursi Lipat">
+                    <h3>Kursi Lipat</h3>
+                    <p class="price">Rp 8.000/hari</p>
+                </div>
+                <div class="featured-card">
+                    <img src="images/lensa1.png" alt="Lensa Apexel">
+                    <h3>Lensa Apexel</h3>
+                    <p class="price">Rp 15.000/hari</p>
+                </div>
+                <div class="featured-card">
+                    <img src="images/kompor.png" alt="Kompor Portable">
+                    <h3>Kompor Portable</h3>
+                    <p class="price">Rp 15.000/hari</p>
+                </div>
+                <div class="featured-card">
+                    <img src="images/asoy3.png" alt="Paket ASOY 3">
+                    <h3>Paket ASOY 3</h3>
+                    <p class="price">Rp 45.000/paket</p>
+                </div>
+            </div>
+            <div class="center-button">
+                <a href="katalog.html" class="btn btn-outline">Lihat Semua Produk</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIDEBAR KERANJANG (CART SIDEBAR) - TETAP ADA DI SEMUA HALAMAN -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Keranjang Sewa</h3>
+            <button class="cart-close" id="cartClose">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Item keranjang akan diisi oleh JavaScript -->
+            <div class="cart-empty">
+                <p>Keranjang masih kosong</p>
+                <p>Silakan pilih produk di halaman Katalog</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price" id="cartTotal">Rp 0</span>
+            </div>
+            <button class="btn-checkout" id="checkoutBtn">Checkout via WhatsApp</button>
+            <p class="cart-note">*Durasi sewa 1x24 jam</p>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-info">
+                <h3>BIG SEWA</h3>
+                <p class="tagline">Turn Moments into Memories</p>
+                <p>Jl. Candi Sewu No.5, Penataran, Nglegok, Blitar 66181</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Kontak</h4>
+                <p>📞 <a href="https://wa.me/6285745565042">0857-4556-5042 (WhatsApp)</a></p>
+                <p>📧 bigsewa22@gmail.com</p>
+                <p>📷 @bigsewa_blitar</p>
+            </div>
+            <div class="footer-hours">
+                <h4>Jam Operasional</h4>
+                <p>🕒 Senin - Minggu: 08.00 - 20.00 WIB</p>
+            </div>
+        </div>
+
+        <!-- Garis Pembatas & Developer -->
+        <hr style="border: 1px solid rgba(255,255,255,0.1); margin: 30px 0 20px;">
+
+        <div class="footer-developer">
+            <p style="text-align: center; opacity: 0.7; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px;">
+                <strong>Developer</strong><br>
+                Lisa Fitri Oktafiana<br>
+                Fiona Surya Suci Ramadhani
+            </p>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 BIG SEWA. All rights reserved.</p>
+        </div>
+    </div> <!-- Penutup container -->
+</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

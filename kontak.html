@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - BIG SEWA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation (SAMA PERSIS DENGAN KATALOG) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo-bigsewa.png" alt="BIG SEWA Logo">
+                <span>BIG SEWA</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="katalog.html">Katalog</a></li>
+                <li><a href="cara-sewa.html">Cara Sewa</a></li>
+                <li><a href="kontak.html" class="active">Kontak</a></li>
+            </ul>
+            <!-- Cart Icon (tetap ada) -->
+            <div class="cart-icon" id="cartToggle">
+                <span class="cart-count">0</span>
+                🛒
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Kontak & Lokasi</h1>
+            <p>Hubungi kami untuk informasi dan pemesanan</p>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Alamat</h3>
+                    <p>Jl. Candi Sewu No.5, RT.01/RW.06, Penataran, Kec. Nglegok, Kabupaten Blitar, Jawa Timur 66181</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>WhatsApp</h3>
+                    <p><a href="https://wa.me/6285745565042">0857-4556-5042</a></p>
+                    <p class="small">Fast response (24 jam)</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>bigsewa22@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📷</div>
+                    <h3>Instagram</h3>
+                    <p>@bigsewa_blitar</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">🕒</div>
+                    <h3>Jam Operasional</h3>
+                    <p>Senin - Minggu: 08.00 - 20.00 WIB</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">💳</div>
+                    <h3>Pembayaran</h3>
+                    <p>Cash • BRI • BCA • Dana • Ovo • Link Aja • Shopee</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+<section class="map">
+    <div class="container">
+        <h2 class="section-title">Lokasi Kami</h2>
+        <div class="map-container">
+            <!-- Google Maps Embed -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d493.85608109140406!2d112.21109651624253!3d-8.014539386639976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78f358f29d5e3b%3A0x2e293494d1782efd!2sHayybig%20manik%20manik!5e0!3m2!1sid!2sid!4v1772690710293!5m2!1sid!2sid" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div class="map-note">
+            <p>✨ <strong>Take at Home:</strong> Ambil barang langsung ke alamat di atas</p>
+        </div>
+    </div>
+</section>
+
+    <!-- SIDEBAR KERANJANG (CART SIDEBAR) - TETAP ADA -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Keranjang Sewa</h3>
+            <button class="cart-close" id="cartClose">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Item keranjang akan diisi oleh JavaScript -->
+            <div class="cart-empty">
+                <p>Keranjang masih kosong</p>
+                <p>Silakan pilih produk di halaman Katalog</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price" id="cartTotal">Rp 0</span>
+            </div>
+            <button class="btn-checkout" id="checkoutBtn">Checkout via WhatsApp</button>
+            <p class="cart-note">*Durasi sewa 1x24 jam</p>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-info">
+                <h3>BIG SEWA</h3>
+                <p class="tagline">Turn Moments into Memories</p>
+                <p>Jl. Candi Sewu No.5, Penataran, Nglegok, Blitar 66181</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Kontak</h4>
+                <p>📞 <a href="https://wa.me/6285745565042">0857-4556-5042 (WhatsApp)</a></p>
+                <p>📧 bigsewa22@gmail.com</p>
+                <p>📷 @bigsewa_blitar</p>
+            </div>
+            <div class="footer-hours">
+                <h4>Jam Operasional</h4>
+                <p>🕒 Senin - Minggu: 08.00 - 20.00 WIB</p>
+            </div>
+        </div>
+
+        <!-- Garis Pembatas & Developer -->
+        <hr style="border: 1px solid rgba(255,255,255,0.1); margin: 30px 0 20px;">
+
+        <div class="footer-developer">
+            <p style="text-align: center; opacity: 0.7; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px;">
+                <strong>Developer</strong><br>
+                Lisa Fitri Oktafiana<br>
+                Fiona Surya Suci Ramadhani
+            </p>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 BIG SEWA. All rights reserved.</p>
+        </div>
+    </div> <!-- Penutup container -->
+</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
